@@ -43,8 +43,8 @@ namespace fizzbuzz_check
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {               
-                c.SwaggerEndpoint("./swagger/v1/swagger.json", "My API V1");   //swagger on ISS need relative path "./"
-                c.RoutePrefix = string.Empty;                                  //and empty route for start
+                c.SwaggerEndpoint("./swagger/v1/swagger.json", "My API V1");   //swagger on ISS (windows) need relative path "./"
+                c.RoutePrefix = string.Empty;                                  //and an empty route for start
             });
 
             app.UseHttpsRedirection();

@@ -35,7 +35,7 @@ namespace int_task2bis.Controllers
             }
             else
             {
-                return "*can't devide it by 2 or 3*";
+                return "*this number can't be divided by 2 and 3*";
             }
         }
     }
