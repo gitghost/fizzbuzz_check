@@ -48,7 +48,7 @@ namespace int_task2bis
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync(" *pusta strona* ");
+                await context.Response.WriteAsync(" *empty site* ");
             });
         }
     }

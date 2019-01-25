@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,21 +41,14 @@ namespace fizzbuzz_check
             }
 
             app.UseSwagger();
-
             app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            {               
+                c.SwaggerEndpoint("./swagger/v1/swagger.json", "My API V1");   //swagger on ISS need relative path "./"
+                c.RoutePrefix = string.Empty;                                  //and empty route for start
             });
 
             app.UseHttpsRedirection();
             app.UseMvc();
-
-       
-
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync(" *brak kontekstu check* ");
-            //});
         }
     }
 }

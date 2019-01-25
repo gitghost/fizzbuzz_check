@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace int_task2bis.Controllers
 {
-    [Route("api/fizzbuzz")] // zmienilem ścieżkę dostępu na fizzbuzz
+    [Route("api/fizzbuzz")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
@@ -35,7 +35,7 @@ namespace int_task2bis.Controllers
             }
             else
             {
-                return "*niepodzielna przez 2 i 3*";
+                return "*can't devide it by 2 or 3*";
             }
         }
     }

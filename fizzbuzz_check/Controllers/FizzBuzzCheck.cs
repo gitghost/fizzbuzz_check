@@ -23,18 +23,12 @@ namespace fizzbuzz_check.Controllers
 
         // POST api/values
         [HttpPost]
-        public string Post([FromBody] int value)
+        public string Post([FromBody] int digitFromBody)
         {
-            //string myString = value.ToString();
-            //return myString;
-
-            Proxxy cos = new Proxxy("login", "123");
-            var dane = cos.GetDane(value);
-            return dane.ToString();
-
+            ProxyClass proxyObject = new ProxyClass("login", "password");
+            var cachedData = proxyObject.GetData(digitFromBody);
+            return cachedData.ToString();
         }
-
-
     }
 }
 
